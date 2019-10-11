@@ -1,11 +1,11 @@
 #%RAML 1.0
-title: onlinebank
+title: onlinebank-transactions
 baseUri: http://examples.fabric360.io
 
 version: 0.0.1
-description: 'Example of Online Banking Service'
+description: 'Example of Online Banking Service View Transactions'
 
-/balances:
+/transactions:
   get: # HTTP method declaration
     description: Get a Balance for an account.
     queryParameters:
@@ -21,6 +21,7 @@ description: 'Example of Online Banking Service'
             example: | # example of Get Balance response looks
               {
                 "amount": 4555.65,
+                "reference": "ebay auction 243",
                 "currency": "USD"
               }
       404:
